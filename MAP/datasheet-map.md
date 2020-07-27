@@ -176,8 +176,7 @@ As part of a study making coreference systems more gender inclusive, we studied 
     
     Part3 - Ablation of Gender Cues:
     		There are four kinds of gender cues we consider: pronouns, names, terms of address, and semantically gendered nouns. See the paper linked at the top for explainations of those gender cues. We ran scripts to automatically ablate those gender cues in the text snippets and modify corresponding features for each instance. 
-    		
-    		For pronouns substitution, all binary third-person singular pronouns were replaced with non-binary pronouns (see list below). Different forms of the same pronoun were mapped to the same group of non-binary pronouns (e.g. He likes his new book. -> Ze likes hir new book). We also generate dependency parses to distinguish 'his' in "his frusbee" and "it was his", and 'her' in "her frisbee" and "went with her".
+    		- For pronouns substitution, all binary third-person singular pronouns were replaced with non-binary pronouns (see list below). Different forms of the same pronoun were mapped to the same group of non-binary pronouns (e.g. He likes his new book. -> Ze likes hir new book). We also generate dependency parses to distinguish 'his' in "his frusbee" and "it was his", and 'her' in "her frisbee" and "went with her".
     		```
     		he/she          -> they/ze/ey/xey
     		him/her         -> them/hir/em/xem
@@ -185,15 +184,12 @@ As part of a study making coreference systems more gender inclusive, we studied 
     		his/hers        -> theirs/hirs/eirs/xyrs
     		himself/herself -> themself/hirself/eirself/xemself
     		```
-
-    		For names substituion, we repalce all names (e.g., “Aditya Modi”) by a random name with only a first initial and a last name (e.g., “B. Hernandez”). We did our best to make sure different forms of the same name were mapped to the same random name (e.g. "Aditya Modi" and "Aditya" -> "B. Hernandez", "Mr. Modi" -> "Mr. Hernandez"). 
-
-    		For terms of address, we remove all of them. Below is the list of terms of address we considered. 
+            - For names substituion, we repalce all names (e.g., “Aditya Modi”) by a random name with only a first initial and a last name (e.g., “B. Hernandez”). We did our best to make sure different forms of the same name were mapped to the same random name (e.g. "Aditya Modi" and "Aditya" -> "B. Hernandez", "Mr. Modi" -> "Mr. Hernandez"). 
+            - For terms of address, we remove all of them. Below is the list of terms of address we considered. 
     		```
     		Mr, Mrs, Mister, Miss, Ms, Mme, Mlle, Sir, Madame, Ma'am, Dame, Esq, Adv, Gentleman, Sire, Excellence, Excellency, Abbot
     		```
-
-    		For semantically gendered nouns, we replace all semantically gendered nouns with a gender-indefinite variant. The list of those nouns and corresponding variants are attached as "sem.csv". This list was collected from the following websites and manually modified by the authors.
+            - For semantically gendered nouns, we replace all semantically gendered nouns with a gender-indefinite variant. The list of those nouns and corresponding variants are attached as "sem.csv". This list was collected from the following websites and manually modified by the authors.
     		```
     		https://www.iluenglish.com/gender-in-english-masculine-and-feminine-words/
 			https://www.myenglishpages.com/site_php_files/grammar-lesson-masculine-feminine.php
